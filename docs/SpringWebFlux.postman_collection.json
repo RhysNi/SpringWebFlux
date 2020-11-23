@@ -1,0 +1,637 @@
+{
+	"info": {
+		"_postman_id": "22de801e-3011-441e-9d9a-9d3961bd7074",
+		"name": "SpringWebFlux",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "springboot+webflux-1-入门",
+			"item": [
+				{
+					"name": "{{url}}/hello",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/hello",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"hello"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "springboot+webflux-2-简单增删改查",
+			"item": [
+				{
+					"name": "{{url}}/city",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cityId\":2,\n    \"provinceId\":1,\n    \"cityName\":\"苏州\",\n    \"description\":\"苏州是个美丽的城市\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/city",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"city"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{url}}/city/3",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/city/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"city",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{url}}/city",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/city",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"city"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{url}}/city",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cityId\": 1,\n    \"provinceId\": 1,\n    \"cityName\": \"苏州\",\n    \"description\": \"苏州是个美丽的城市\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/city",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"city"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{url}}/city/6",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/city/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"city",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "springboot+webflux-3-集成mongodb",
+			"item": [
+				{
+					"name": "{{url}}/student/saveStudent",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"studentName\":\"张三\",\n    \"className\":\"\",\n    \"description\":\"北京是个美丽的城市\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/student/saveStudent",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"student",
+								"saveStudent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{url}}/student/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/student/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"student",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{url}}/student/queryAllStudent",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/student/queryAllStudent",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"student",
+								"queryAllStudent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{url}}/student/update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":3,\n    \"provinceId\":1,\n    \"cityName\":\"北京\",\n    \"description\":\"北京和上海都是美丽的城市\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/student/update",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"student",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{url}}/student/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/student/4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"student",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "springboot+webflux-4-渲染thymeleaf框架",
+			"item": [
+				{
+					"name": "{{url}}/city",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cityId\":6,\n    \"provinceId\":1,\n    \"cityName\":\"苏州\",\n    \"description\":\"苏州是个美丽的城市\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/city",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"city"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{url}}//page/list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/city/page/list",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"city",
+								"page",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{url}}/city/3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/city/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"city",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{url}}/city",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cityId\": 1,\n    \"provinceId\": 3,\n    \"cityName\": \"无锡\",\n    \"description\": \"无锡是个美丽的城市\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/city",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"city"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{url}}/city/4",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/city/4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"city",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{url}}/city",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/city",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"city"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{url}}/hello",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/city/hello",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"city",
+								"hello"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "ae1a1aef-042e-4c96-aec4-92a444951f5f",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "108cb6c6-8a1d-424b-9b67-c02ad09ff7a6",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "springboot+webflux-4-渲染thymeleaf框架+集成mongodb",
+			"item": [
+				{
+					"name": "{{url}}/city",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":5,\n    \"provinceId\":1,\n    \"cityName\":\"无锡\",\n    \"description\":\"无锡是个美丽的城市\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/city/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"city",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{url}}//page/list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/city/page/list",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"city",
+								"page",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{url}}/city/3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/city/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"city",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{url}}/city",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cityId\": 1,\n    \"provinceId\": 3,\n    \"cityName\": \"无锡\",\n    \"description\": \"无锡是个美丽的城市\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/city",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"city"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{url}}/city/4",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/city/4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"city",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{url}}/city",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/city",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"city"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{url}}/hello",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/city/hello",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"city",
+								"hello"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "0ef9eb0e-67b1-4200-a301-c49e6be4a523",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "a6e5855e-4e63-4359-bf07-9b502b491950",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
