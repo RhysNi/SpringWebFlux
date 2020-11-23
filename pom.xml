@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.5.RELEASE</version>
+    </parent>
+
+    <groupId>com.spring</groupId>
+    <artifactId>springwebflux</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <lombok.version>1.18.8</lombok.version>
+        <webflux-version>2.3.1.RELEASE</webflux-version>
+    </properties>
+
+    <modules>
+        <!--通用基础模块-->
+        <module>commons</module>
+        <!--WebFlux快速入门-->
+        <module>springboot+webflux-1-quickstart</module>
+        <!--WebFlux实现Restful-->
+        <module>springboot+webflux-2-restful</module>
+        <!--WebFlux提升集成mongodb-->
+        <module>springboot+webflux-3+mongodb</module>
+        <!--WebFlux提升集成thymeleaf-->
+        <module>springboot+webflux-4+thymeleaf</module>
+        <!--WebFlux提升集成thymeleaf+mongodb -->
+        <module>springboot+webflux-5+thymeleaf+mongodb</module>
+        <!--WebFlux提升集成Redis -->
+        <module>springboot+webflux-6-redis</module>
+        <!--WebFlux提升集成Redis cache-->
+        <module>springboot+webflux-7-redis-cache</module>
+        <!--WebFlux提升集成 websocket-->
+        <module>springboot+webflux-8-websocket</module>
+    </modules>
+    <dependencies>
+        <dependency>
+            <groupId>com.spring</groupId>
+            <artifactId>commons</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <optional>true</optional>
+        </dependency>
+
+        <!--不能与spring-boot-starter-webflux同时使用，会强制把netty容器改为Tomcat容器-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.boot</groupId>-->
+        <!--            <artifactId>spring-boot-starter-web</artifactId>-->
+        <!--            <version>2.3.0.RELEASE</version>-->
+        <!--        </dependency>-->
+
+        <!-- Spring Boot Web Flux 依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+            <version>${webflux-version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
